@@ -2,7 +2,7 @@
 This is a web3.0 app in solidity using ethereum smart contract
 
 
-**steps to get going
+#steps to get going
 
 1) install npm, truffle
 2) run 
@@ -16,7 +16,7 @@ truffle init
 npm install
 ```
 
-**Flow of the project
+#Flow of the project
 
 1.List tasks in the smart contract
 2.List tasks in the console
