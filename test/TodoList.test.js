@@ -12,4 +12,10 @@ contract('TodoList', (accounts)=>{
     assert.notEqual(address, null)
     assert.notEqual(address, undefined)
   })
+
+  it('lists tasks', async()=>{
+    const taskcount = await this.todoList.taskCount()
+    const task = await this.todoList.tasks(taskcount)
+    assert.equal(task.id.toNumber(), taskcount.toNumber())
+  })
 })
