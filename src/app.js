@@ -78,6 +78,13 @@ App = {
       await App.todoList.createTask(content, {from: App.account})
       window.location.reload();
     },
+
+    toggleCompleted: async(e)=>{
+        App.setLoading(true)
+        const taskid = e.target.name
+        await App.todoList.toggleCompleted(taskid, {from: App.account})
+        window.location.reload()
+    },
     setLoading: (boolean)=>{
         App.loading = boolean
         const loader = $('#loader')
@@ -108,7 +115,7 @@ App = {
             $newTaskTemplate.find('input')
                             .prop('name', taskid)
                             .prop('checked', taskcompleted)
-                            // .on('click', App.toggleCompleted)
+                            .on('click', App.toggleCompleted)
 
 
             if(taskcompleted){
