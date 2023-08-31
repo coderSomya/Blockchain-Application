@@ -10,7 +10,6 @@
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && sexit 1"
   },
-  "type": "module",
   "author": "somyajeet",
   "license": "ISC",
   "devDependencies": {
@@ -24,6 +23,7 @@
     "truffle-contract": "3.0.6"
   },
   "dependencies": {
+    "mocha": "^10.2.0",
     "web3": "^4.1.1"
   }
 }
